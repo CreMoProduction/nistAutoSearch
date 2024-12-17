@@ -23,15 +23,21 @@ filename = basename(sub("\\..*$", "", msp_file))
 output_file= paste0(suffix_name,".csv")
 
 start_time= Sys.time()
-#=======Fix NIST file=========
-file = suppressWarnings(readLines(msp_file))
-output_string <- gsub(":", ": ", file)
-writeLines(output_string, msp_file)
+#=======Read and Fix NIST file=========
+file = suppressWarnings(readLines(msp_file)) #читаю файл
+# Function to ensure one space after each colon. INTEGRITY CHECK
+fix_colon_spacing <- function(text) {
+  # Use gsub to find colons without space or with multiple spaces and replace with colon + single space
+  fixed_text <- gsub(":(\\S)", ": \\1", text)  # Add space if no space after colon
+  fixed_text <- gsub(":(\\s+)", ": ", fixed_text)  # Replace multiple spaces with one space
+  return(fixed_text)
+}
+writeLines(fix_colon_spacing(file), msp_file)
 
 #======Import MSP data=======
 msp_objs <- ReadMsp(msp_file)
 len = length(msp_objs)
-#len=10 #uncomment if you need a test run limited by 10 hits
+len=10 #uncomment if you need a test run limited by 10 hits
 print(paste("Found peaks:", len,  sep=" "))
 
 
