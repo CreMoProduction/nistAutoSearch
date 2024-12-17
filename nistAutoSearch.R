@@ -31,7 +31,7 @@ writeLines(output_string, msp_file)
 #======Import MSP data=======
 msp_objs <- ReadMsp(msp_file)
 len = length(msp_objs)
-len=10
+#len=10 #uncomment if you need a test run limited by 10 hits
 print(paste("Found peaks:", len,  sep=" "))
 
 

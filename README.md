@@ -16,8 +16,27 @@ This repository provides tools to perform library searches against electron ioni
 1. Automating spectral library searches.
 2. Processing mass spectral data in MSP (NIST) format.
 3. Handling large datasets by splitting lists into manageable blocks.
-4. Exporting search results and processed data to CSV files.
-5. Automatic installation all dependencies
-6. Automatic MSP (NIST) file corruption fix
+4. Automatic MSP (NIST) file itergrity fix.
+5. Exporting search results and processed data to CSV files.
+6. Automatic installation all dependencies.
+ 
+## How to run the tool
+### Run the Tool
 
+1. Start the tool by running the `launcher.bat` file.
+2. Make sure the NIST MS Search program is installed in its deafult location (`C:\NIST$\MSSEARCH`) and running.
+3. NIST MS Search must be open and ready to communicate with its API.
+
+### Enable Automatic Search
+
+1. In NIST MS Search, navigate to `Options` -> `Library Search Options` menu -> `Automation` tab.
+2. Enable `Automatic Search On` to allow the tool to communicate with the NIST MS Search API.
+
+### Set the Number of Hits to Print
+
+1. In the `Automation` tab of the `Library Search options`, find the `Number of hits to print` field.
+2. Adjust this value to control how many search results are displayed for each query.
+3. Let the tool perform the analysis of your input MSP (NIST) dataautomatically.
+
+Once configured, the tool will automate spectral library searches, process your mass spectral data, and export results as needed.
 **nistAutoSearch** tool requires listed open source [CRAN](https://cran.r-project.org) packages: [mssearchr](https://github.com/AndreySamokhin/mssearchr)
