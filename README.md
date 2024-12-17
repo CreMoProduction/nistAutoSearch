@@ -36,7 +36,8 @@ This repository provides tools to perform library searches against electron ioni
 
 1. In the `Automation` tab of the `Library Search options`, find the `Number of hits to print` field.
 2. Adjust this value to control how many search results are displayed for each query.
-3. Let the tool perform the analysis of your input MSP (NIST) dataautomatically.
+3. Let the tool perform the analysis of your input MSP (NIST) data automatically.
 
 Once configured, the tool will automate spectral library searches, process your mass spectral data, and export results as needed.
+
 **nistAutoSearch** tool requires listed open source [CRAN](https://cran.r-project.org) packages: [mssearchr](https://github.com/AndreySamokhin/mssearchr)
