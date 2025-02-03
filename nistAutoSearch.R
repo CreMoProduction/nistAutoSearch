@@ -1,6 +1,6 @@
 
-#' created: 17-Dec-202
-#' ver: 0.1
+#' created: 3-Feb-2025
+#' ver: 0.11
 #' @author: Alex Ilchenko
 
 package= function() {
@@ -48,6 +48,9 @@ print("Searching...")
 for (i in 1:len) {
   hitlists <- LibrarySearchUsingNistApi(msp_objs[i])
   df = do.call(rbind, hitlists)
+  if (nrow(df) == 0) { # Add an empty row if 0 hits
+    df <- rbind(df, setNames(as.list(rep(NA, 10)), colnames(df)))
+  }
   rda_name = data.frame(msp_objs[[i]]$name)
   colnames(rda_name)[1] = "rda name"
   df= cbind(rda_name, df)

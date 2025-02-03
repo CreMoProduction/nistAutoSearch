@@ -1,3 +1,6 @@
+rem path to R.exe folder
+set "R_location=C:\Program Files"
+rem 
 set TITLE=nistAutoSearch
 
 TITLE %title%
@@ -21,7 +24,7 @@ echo Welcome to %title%
     echo. 
 
 rem define if R.exe is installed and use its path to launch script.R
-for /r "c:\Program Files" %%F in (*Rscript.exe*) do (
+for /r "%R_location%" %%F in (*Rscript.exe*) do (
 	"%%~fF" "%rscript%" %*
 
 	rem msg * /time:4  "Succeeded"
