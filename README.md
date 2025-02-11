@@ -40,8 +40,6 @@ This repository provides tools to perform library searches against electron ioni
 
 Once configured, the tool will automate spectral library searches, process your mass spectral data, and export results as needed.
 
-<<<<<<< HEAD
 **nistAutoSearch** tool requires listed open source [CRAN](https://cran.r-project.org) packages: [mssearchr](https://github.com/AndreySamokhin/mssearchr)
-=======
-**nistAutoSearch** tool requires listed open source [CRAN](https://cran.r-project.org) packages: [mssearchr](https://github.com/AndreySamokhin/mssearchr)
->>>>>>> 48bca5e (fixed integrity check function)
+
+
