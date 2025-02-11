@@ -40,6 +40,14 @@ This repository provides tools to perform library searches against electron ioni
 
 Once configured, the tool will automate spectral library searches, process your mass spectral data, and export results as needed.
 
+### Output csv table:
+
+| rda name | name      | mf           | rmf          | prob       | lib     | cas       | formula | mw             | id  | ri              |
+|----------|-----------|--------------|--------------|------------|---------|-----------|---------|----------------|-----|-----------------|
+| input metabolite name | nist metabolite name | match score  | reverse match score | probability | library | cas #    | formula | molecular weight | id # | retention index |
+
+
+
 **nistAutoSearch** tool requires listed open source [CRAN](https://cran.r-project.org) packages: [mssearchr](https://github.com/AndreySamokhin/mssearchr)
 
 
