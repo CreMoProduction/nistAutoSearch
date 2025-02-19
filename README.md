@@ -26,6 +26,12 @@ This repository provides tools to perform library searches against electron ioni
 1. Start the tool by running the `launcher.bat` file.
 2. Make sure the NIST MS Search program is installed in its deafult location (`C:\NIST$\MSSEARCH`) and running.
 3. NIST MS Search must be open and ready to communicate with its API.
+4. Make sure the launcher can locate the R engine. You need to specify the path to the R executable in the `launcher.bat` file. Update the following line if you have an alterantive path:
+
+```batch
+rem path to R.exe folder
+set "R_location=C:\Program Files"
+```
 
 ### Enable Automatic Search
 
@@ -40,8 +46,13 @@ This repository provides tools to perform library searches against electron ioni
 
 Once configured, the tool will automate spectral library searches, process your mass spectral data, and export results as needed.
 
-<<<<<<< HEAD
+### Output csv table:
+
+| rda name | name      | mf           | rmf          | prob       | lib     | cas       | formula | mw             | id  | ri              |
+|----------|-----------|--------------|--------------|------------|---------|-----------|---------|----------------|-----|-----------------|
+| input metabolite name | nist metabolite name | match score  | reverse match score | probability | library | cas #    | formula | molecular weight | id # | retention index |
+
+
+
 **nistAutoSearch** tool requires listed open source [CRAN](https://cran.r-project.org) packages: [mssearchr](https://github.com/AndreySamokhin/mssearchr)
-=======
-**nistAutoSearch** tool requires listed open source [CRAN](https://cran.r-project.org) packages: [mssearchr](https://github.com/AndreySamokhin/mssearchr)
->>>>>>> 48bca5e (fixed integrity check function)
+
