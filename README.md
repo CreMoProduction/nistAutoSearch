@@ -55,8 +55,3 @@ Once configured, the tool will automate spectral library searches, process your 
 
 
 **nistAutoSearch** tool requires listed open source [CRAN](https://cran.r-project.org) packages: [mssearchr](https://github.com/AndreySamokhin/mssearchr)
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 0a83de2a51709d095f34cbf9f68af2671b424cf6
